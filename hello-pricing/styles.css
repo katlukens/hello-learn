@@ -1,0 +1,116 @@
+body {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #00a1ab;
+    font-weight: 900;
+    margin-top: 3em;
+    margin-bottom: 0;
+  }
+  
+  .subhead {
+    font-size: 1.3125rem;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    color: #4e4e4e;
+  }
+  
+  .plans {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .plan {
+    color: #4e4e4e;
+    background: linear-gradient(-45deg, #E5E3E8, #fafafa);
+    width: 200px;
+    padding: 2em;
+    border-radius: 1em;
+    margin: 0 0.5em;
+  }
+  
+  .plan_bl {
+    color: #fff;
+    background: linear-gradient(-45deg, #00a1ab, #3741a0);
+    width: 200px;
+    padding: 2em;
+    border-radius: 1em;
+    margin: 0 0.5em;
+  }
+
+  .plan__title {
+    text-transform: uppercase;
+    margin: 0 0 1em;
+    font-size: 1.125em;
+  }
+  
+  .plan__title_bl {
+    text-transform: uppercase;
+    margin: 0 0 1em;
+    font-size: 1.125em;
+  }
+
+  .plan__price {
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0;
+    color: #00a1ab;
+  }
+
+  .plan__price_bl {
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0;
+    color: #fff;
+  }
+  
+  .plan__price span {
+    display: block;
+    font-size: 1.5625rem;
+    font-weight: 300;
+  }
+
+  .plan__price_bl span {
+    display: block;
+    font-size: 1.5625rem;
+    font-weight: 300;
+  }
+  
+  .plan__description {
+    margin: 2em 0;
+    line-height: 1.5;
+    color: #4e4e4e;
+  }
+  
+  .plan__description_bl {
+    margin: 2em 0;
+    line-height: 1.5;
+    color: #fff;
+  }
+
+  .plan__button {
+    background: #4e4e4e;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .875em;
+  }
+
+  .plan__button_bl {
+    background: #fff;
+    color: #4e4e4e;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .875em;
+  }
+  

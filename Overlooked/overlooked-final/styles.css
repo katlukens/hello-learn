@@ -1,153 +1,139 @@
-/* ///////////////
-  Reset
-  ////////////// */
+:root {
+    --clr-base-400: #5e5e5e;
+    --clr-base-500: #494949;
+  
+    --clr-ui-300: #f8e2ff;
+    --clr-ui-400: #580d3a;
+    --clr-ux-300: #e2ffea;
+    --clr-ux-400: #115926;
+    --clr-dev-300: #e2fcff;
+    --clr-dev-400: #024f4f;
+  
+    --clr-accent-400: #7e47c5;
+  
+    --ff-accent: "Podkova", serif;
+    --ff-base: "Open Sans", sans-serif;
+  
+    --fs-300: 0.75rem;
+    --fs-400: 1rem;
+    --fs-500: 2.25rem;
+  
+    --fw-400: 400;
+    --fw-700: 700;
+  
+    --shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
+    --border-radius: 0.75rem;
+  }
 
-  *,
+  /* *,
   *::before,
   *::after {
-    box-sizing: border-box;
+      box-sizing: border-box;
+  } */
+
+  .candidates {
+      font-family: var(--ff-base);
+      display: flex;
+  }
+
+  .candidate {
+      padding: 1em;
+  }
+
+  .candidate img {
+      border-radius: var(--border-radius);
+  }
+
+  .candidate .name {
+      font-family: var(--ff-accent);
+      font-size: var(--fs-500);
+      color: var(--clr-base-500);
+  }
+
+  .candidate .bio {
+      color: var(--clr-base-400);
+  }
+
+  .social {
+      list-style-type: none;
+      column-count: 3;
+      padding: 2em;
+  }
+
+  .btn {
+      /* display: inline-block; */
+      text-decoration: none;
+      vertical-align: baseline;
+      /* padding: 3em 3em; */
+      text-transform: uppercase;
+      font-weight: var(--fw-700);
+      border-radius:var(--border-radius);
+      background: var(--clr-accent-400);
+      color: white;
   }
   
-  /* ///////////////
-    General styling
-    ////////////// */
+  /* /////////////////
+     Layout related
+     no need to touch any of this
+  //////////////////*/
   
-  body {
-    font-family: "Roboto", sans-serif;
-    text-align: center;
-  }
-  
-  .section-title {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    font-weight: 900;
-    margin-top: 3em;
-    margin-bottom: 0;
-    color: #00a1ab;
-  }
-  
-  .fs-500 {
-    font-size: 1.3125rem;
-    margin: 0;
-  }
-  
-  .container {
-    padding: 0 2em;
+  .candidates {
+    max-width: 70em;
     margin: 0 auto;
-    max-width: 1000px;
-  }
-  
-  /* ///////////////
-    Buttons
-    ////////////// */
-  
-  .button {
-    display: inline-block;
-    text-decoration: none;
-    padding: 0.5em 0.75em;
-    border-radius: 0.25em;
-    text-transform: uppercase;
-    font-weight: 700;
-    background: #00a1ab;
-    color: #fff;
-  }
-  
-  .button--light {
-    background: white;
-    color: #4e4e4e;
-  }
-  
-  .button--dark {
-    color: white;
-    background: #4e4e4e;
-  }
-  
-  /* ///////////////
-    Plans
-    ////////////// */
-  
-  .plans {
-    display: flex;
-    justify-content: center;
-    margin: 2em 0;
-  }
-  
-  .plan {
-    width: 200px;
     padding: 2em;
-    border-radius: 1em;
-    margin: 0 0.5em;
+    display: grid;
+    gap: 2em;
   }
   
-  .plan--light {
-    color: #4e4e4e;
-    background: linear-gradient(-45deg, #e5e3e8, #fafafa);
+  .candidate {
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-areas:
+      "img social"
+      "name name"
+      "role role"
+      "bio bio"
+      "button button";
+    gap: 0.5em;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
   }
   
-  .plan--light .plan__price {
-    color: #00a1ab;
+  @media (min-width: 500px) {
+    .candidate {
+      grid-template-columns: min-content minmax(15rem, 22.5rem);
+      grid-template-rows: min-content min-content 1fr auto;
+      grid-template-areas:
+        "img name"
+        "img role"
+        "img bio"
+        "social button";
+    }
   }
   
-  .plan--light .button {
-    color: white;
-    background: #4e4e4e;
+  @media (min-width: 960px) {
+    .candidates {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   
-  .plan--accent {
-    color: #fff;
-    background: linear-gradient(-45deg, #00a1ab, #3741a0);
+  .candidate img {
+    grid-area: img;
   }
-  
-  .plan--accent .button {
-    background: white;
-    color: #4e4e4e;
+  .candidate .name {
+    grid-area: name;
   }
-  
-  .plan__title {
-    text-transform: uppercase;
-    margin: 0 0 1em;
+  .candidate .roles {
+    grid-area: role;
   }
-  
-  .plan__price {
-    font-size: 3rem;
-    line-height: 1;
-    font-weight: 900;
-    margin: 0;
+  .candidate .bio {
+    grid-area: bio;
   }
-  
-  .plan__price span {
-    display: block;
-    font-size: 1.5625rem;
-    font-weight: 300;
+  .candidate .social {
+    grid-area: social;
   }
-  
-  .plan__description {
-    margin: 2em 0;
-    line-height: 1.5;
-  }
-  
-  /* ///////////////
-    Teams
-    ////////////// */
-  
-  .team-members {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .team-member {
-    background: #abc;
-    text-align: left;
-    flex: 1 1 45%;
-    margin: 1em;
-    display: flex;
-    border-radius: 0.5em;
-    align-items: center;
-    padding: 0.5em 2em 0.5em 0.5em;
-  }
-  
-  .team-member img {
-    width: 10rem;
-    border-radius: 0.25em;
+  .candidate .btn {
+    grid-area: button;
   }
   

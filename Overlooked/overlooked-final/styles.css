@@ -16,7 +16,7 @@
   
     --fs-300: 0.75rem;
     --fs-400: 1rem;
-    --fs-500: 2.25rem;
+    --fs-500: 2rem;
   
     --fw-400: 400;
     --fw-700: 700;
@@ -25,19 +25,26 @@
     --border-radius: 0.75rem;
   }
 
-  /* *,
+  *,
   *::before,
   *::after {
       box-sizing: border-box;
-  } */
+  }
 
-  .candidates {
-      font-family: var(--ff-base);
-      display: flex;
+  body {
+    font-family: var(--ff-base);
+    line-height: 1.6;
+    font-size: var(--fs-400);
+    color: var(--clr-base-400);
   }
 
   .candidate {
-      padding: 1em;
+    /* max-width: 70em;
+    margin: 0 auto;
+    display: grid;
+    gap: 2em; */
+    padding: 1em;
+
   }
 
   .candidate img {
@@ -48,25 +55,61 @@
       font-family: var(--ff-accent);
       font-size: var(--fs-500);
       color: var(--clr-base-500);
+      line-height: 1;
+  }
+
+  .roles {
+    line-height: 1;
+    font-size: var(--fs-300);
+  }
+
+  .tag {
+    /* font-size: var(--fs-300); */
+    font-weight: var(--fw-700);
+    display: inline-block;
+    padding: .15em .75em;
+    border-radius: var(--border-radius);
+    margin-right: .5em;
+  }
+
+  .ui {
+    color: var(--clr-ui-400);
+    background: var(--clr-ui-300);
+  }
+
+  .ux {
+    color: var(--clr-ux-400);
+    background: var(--clr-ux-300);
+  }
+
+  .dev {
+    color: var(--clr-dev-400);
+    background: var(--clr-dev-300);
   }
 
   .candidate .bio {
       color: var(--clr-base-400);
   }
 
-  .social {
-      list-style-type: none;
-      column-count: 3;
-      padding: 2em;
+  .candidate .social {
+      line-height: 1;
+      list-style: none;
+      padding: 0;
+      margin-bottom: 0;
+      display: flex;
+      justify-content: space-evenly;
+      /* list-style-type: none; */
+      /* column-count: 3; */
+      /* padding: 2em; */
   }
 
   .btn {
-      /* display: inline-block; */
+      display: inline-block;
       text-decoration: none;
       vertical-align: baseline;
-      /* padding: 3em 3em; */
+      padding: .5em 3em;
       text-transform: uppercase;
-      font-weight: var(--fw-700);
+      /* font-weight: var(--fw-700); */
       border-radius:var(--border-radius);
       background: var(--clr-accent-400);
       color: white;
@@ -122,12 +165,16 @@
     grid-area: img;
   }
   .candidate .name {
+    margin: 0;
     grid-area: name;
   }
   .candidate .roles {
+    margin: 0;
     grid-area: role;
+    line-height: 1;
   }
   .candidate .bio {
+    margin: 0;
     grid-area: bio;
   }
   .candidate .social {
@@ -135,5 +182,7 @@
   }
   .candidate .btn {
     grid-area: button;
+    align-self: end;
+    justify-self: end;
   }
   

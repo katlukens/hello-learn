@@ -1,0 +1,26 @@
+:root {
+    --clr-dark-100: #171717;
+    --clr-white-900: #fff;
+    --clr-accent-500: #59e89c;
+
+    --ff-base: "PT Sans", sans-serif;
+
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-base);
+    text-align: center;
+    margin: 0;
+}
+
+.hero {
+    background-image: url(assets/hero.jpg);
+}

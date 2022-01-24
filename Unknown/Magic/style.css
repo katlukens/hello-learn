@@ -1,5 +1,6 @@
 :root {
     --clr-dark-100: #171717;
+    --clr-mid-200: #333333;
     --clr-white-900: #fff;
     --clr-accent-500: #59e89c;
 
@@ -22,5 +23,50 @@ body {
 }
 
 .hero {
+    display: flow-root;
     background-image: url(assets/hero.jpg);
+    background-size: cover;
+}
+
+.hero__content {
+    background-color: var(--clr-white-900);
+    width: 48rem;
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+h1 {
+    font-weight: var(--fw-400);
+    font-size: 2.25rem;
+    line-height: auto;
+    margin: .5em .5em;
+}
+
+h1 span {
+    font-weight: var(--fw-700);
+}
+
+p {
+    font-weight: var(--fw-400);
+    font-size: 1.25rem;
+    color: var(--clr-mid-200);
+    line-height: 2rem;
+    margin: 2rem 2rem;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    font-weight: var(--fw-700);
+    font-size: 1.125rem;
+    color: var(--clr-dark-100);
+    background: var(--clr-accent-500);
+}
+
+.btn:hover,
+a:hover {
+    background-color: skyblue;
 }

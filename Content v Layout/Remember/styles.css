@@ -165,12 +165,12 @@
     align-items: center;
     padding: 0.5em 2em 0.5em 0.5em;
     line-height: 1.6;
+    gap: 1em;
   }
   
   .team-member img {
     width: 10rem;
     border-radius: 0.25em;
-    margin-right: 1em;
   }
   
   .team-member .name {
@@ -179,6 +179,7 @@
     font-weight: 900;
     color: var(--pop);
     margin: 0;
+    border: 2px solid red;
   }
   
   .team-member .position {
@@ -193,7 +194,5 @@
   
   .team-member--mirrored img {
     order: 2;
-    margin-right: 0;
-    margin-left: 1em;
   }
   

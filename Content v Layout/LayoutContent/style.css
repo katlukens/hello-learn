@@ -15,7 +15,7 @@
     --fs-600: 2.25rem;
     --fs-700: 3rem;
 
-    --box-shadow: 0 0.25em 1.5em rgba(0, 0, 0, 0.15);
+    --box-shadow: 0 0.25em 1.5em rgba(0, 0, 0, 0.20);
   }
   
   /* reset */
@@ -57,7 +57,7 @@
   @media (min-width: 40em) {
     .split {
       flex-direction: row;
-      justify-content: space-between;
+      /* justify-content: space-between; */
     }
   
     .split > * {
@@ -83,6 +83,7 @@
   h2,
   h3 {
     font-weight: var(--fw-700);
+    line-height: 1.1;
   }
   
   h1 {
@@ -105,6 +106,12 @@
   .section-three {
     background-color: var(--clr-primary-400);
     color: var(--clr-neutral-100);
+  }
+
+  /* genral layout */
+
+  section {
+    padding: 10rem 0;
   }
   
   /* components */

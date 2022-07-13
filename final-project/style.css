@@ -30,6 +30,7 @@
 
   @media (min-width: 40em) {
     :root {
+      --fs-400: 1.375rem;
       --fs-500: 1.75rem;
       --fs-600: 2.125rem;
       --fs-900: 4.25rem;
@@ -132,13 +133,20 @@
       font-size: var(--fs-600);
     }
 
+    .article-full h3,
     .section-title {
       font-size: var(--fs-600);
       color: var(--clr-neutral-400);
     }
 
+    .article-full h3 + p,
     .section-subtitle {
       font-size: var(--fs-500);
+    }
+
+    .article-full h3 + p {
+      font-family: var(--ff-serif);
+      margin: 0;
     }
 
     .btn {
@@ -202,7 +210,7 @@
     }
 
     .xl-space {
-      margin-top: 5rem;
+      margin-top: 5rem !important;
     }
 
     /* components */
@@ -237,6 +245,27 @@
       background-position: center left;
     }
  
+    .page-article .primary-header {
+      background-image: url(assets/article.jpg);
+      background-position: center left;
+      position: relative;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .page-article .primary-header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(90deg, rgba(255,255,255,.45), rgba(255,255,255,0));
+      z-index: -1;
+
+    }
+
+
     .primary-nav {
       position: fixed;
       bottom: .5em;
@@ -504,3 +533,45 @@
         grid-column: span 3;
       }
     }
+
+    /* article page styles */
+
+    .article-full {
+      --flow-spacer: 2em;
+      max-width: 40rem;
+      margin: 0 auto;
+    }
+
+    /* .article-full h3 {
+      color: var(--clr-neutral-400);
+      font-size: var(--fs-500);
+    }
+
+    .article-full h3 + p {
+      font-size: var(--fs-500);
+      font-family: var(--ff-serif);
+      font-weight: var(--fw-200);
+      margin: 0;
+    } */
+
+    .article-grid-blog  {
+      display: grid;
+      gap: 3em 2em;
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .article-grid-blog > * {
+      grid-column: 1/-1;
+    }
+
+    @media (min-width: 40em) {
+      .article-grid-blog > * {
+        grid-column: 1/-1;
+      }
+
+      .article-grid-blog > .article-preview {
+        grid-column: span 3;
+      }
+    }
+
+

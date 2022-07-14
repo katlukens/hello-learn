@@ -141,7 +141,8 @@
 
     .article-full h3 + p,
     .section-subtitle {
-      font-size: var(--fs-500);
+      font-family: var(--ff-serif);
+      font-size: var(--fs-600);
     }
 
     .article-full h3 + p {

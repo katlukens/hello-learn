@@ -16,6 +16,7 @@
   <header class="primary-header">
     <div class="primary-header__inner">
       <a href="index.html" aria-label="acme home page"><img src="assets/logo.svg" alt="" class="logo"></a>
+      <!-- <a href="/final-project/blog.html" class="btn-bk">Back</a> -->
       <nav class="primary-nav">
         <ul class="primary-nav__list">
           <li><a href="/final-project/index.html">Home</a></li>
@@ -24,7 +25,7 @@
       </nav>
     </div>
     <div class="container">
-        <h1 class="page-title">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="page-title">Lorem ipsum dolor sit amet.</h1>     
     </div>
   </header>
 
@@ -93,5 +94,85 @@
             </div>
           </article>  
     </div>
-    <div class="split xl-space"></div>
+    <div class="split xl-space">
+      <article class="article-preview flow content">
+        <a href="/final-project/article.html" class="flow-content">
+          <img src="assets/blog-3.jpg" alt="water bottle">         
+          <h3>Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+        </a>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        <div class="article-info">
+            <time datetime="2020-10-08">Oct 8</time>
+            <p>8 min read</p>
+        </div>
+    </article>
+    <article class="article-preview flow-content">
+        <img src="assets/blog-4.jpg" alt="tea kettle">
+        <a href="/final-project/blog.html" class="flow-content">
+        <h3>Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+        </a>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        <div class="article-info">
+            <time datetime="2020-10-08">Oct 8</time>
+            <p>8 min read</p>
+        </div>
+      </article>
+    </div>
   </section>
+
+  <section class="cta">
+    <div class="container">
+      <header>
+        <h2 class="section-title">Inbox</h2>
+        <p class="section-subtitle">Knowledge letters</p>
+      </header>
+      <img class="xl-space" src="assets/newsletter.jpg" alt="floating household items">
+
+      <form action="" method="post" class="newsletter" id="newsletter">
+        <div>
+          <label for="name">Name</label>
+          <input placeholder="Your Name" type="text" id="name" name="name">
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input placeholder="example@domain.com" type="email" name="email" id="email">
+        </div>
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="primary-footer">
+    <div class="container">
+      <div class="primary-footer__inner split">
+        <a href="index.html" aria-label="acme home page"><img src="assets/logo.svg" alt="" class="logo"></a>
+        
+        <div class="footer-nav">
+          <dl class="flow-content">
+            <dt class="text-serif">Map</dt>
+            <dd><a href="#">Blog</a></dd>
+            <dd><a href="#">Privacy</a></dd>
+          </dl>
+          
+          <dl class="flow-content">
+            <dt class="text-serif">Resources</dt>
+            <dd><a href="#">Courses</a></dd>
+            <dd><a href="#">Hacks</a></dd>
+            <dd><a href="#">Freee stuff</a></dd>
+          </dl>
+        </div>
+      </div>
+      <div class="split text-serif">
+        <p class="copywrite">&copy 2022 acme. All rights reserved.</p>
+        <ul class="footer-social">
+          <li><a href="#">Yt</a></li>
+          <li><a href="#">Tw</a></li>
+          <li><a href="#">Fb</a></li>
+          <li><a href="#">Li</a></li>
+        </ul>
+      </div>
+    </div>  
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+:root {
+    --ff-sans: "Montserrat", sans-serif;
+    --ff-serif: "Fraunces", serif;
+  
+    /* small screen font-sizes */
+    --fs-200: 0.875rem;
+    --fs-300: 1rem;
+    --fs-400: 1.25rem;
+    --fs-500: 1.375rem;
+    --fs-600: 1.75rem;
+    --fs-900: 2.125rem;
+
+    --fw-200: 200;
+    --fw-300: 300;
+    --fw-500: 500;
+    --fw-700: 700;
+  
+    --clr-neutral-100: #fff;
+    --clr-neutral-200: ;
+    --clr-neutral-300: ;
+    --clr-neutral-400: ;
+    --clr-neutral-500: #6c7289;
+    --clr-neutral-900: #1c232b;
+  
+    --clr-primary-300: #f2ebe3;
+    --clr-primary-400: #3c8067;
+    --clr-primary-500: #1d3e32;
+  
+    --br: 1rem;
+  }
+
+      /* reset */
+  
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+  
+      body {
+        font-size: var(--fs-200);
+        font-family: var(--ff-sans);
+        /* font-weight: var(--fw-700); */
+        background: var(--clr-primary-300);
+      }
+
+      img {
+        display: block;
+        border-radius: .75em .75em 0 0;
+      }
+
+      .card {
+        display: flex;
+        justify-content: center;
+        max-width: 70em;
+        margin: 0 auto;
+        padding: 2em;
+        display: grid;
+        gap: 2em;
+      }
+        
+
+      .btn {
+        background: var(--clr-primary-400);
+        color: var(--clr-neutral-100);
+        text-decoration: none;
+        font-weight: var(--fw-500);
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.25rem;
+      }
+
+      .btn:hover {
+        background: var(--clr-primary-500);
+      }
+
+      span {
+        font: Fraunces;
+        font-size: var(--fs-900);
+        color: var(--clr-primary-400);
+        font-weight: var(--fw-700);
+      }
+    

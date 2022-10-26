@@ -1,6 +1,6 @@
 :root {
-    --ff-sans: "Montserrat", sans-serif;
-    --ff-serif: "Fraunces", serif;
+    --ff-sans: "Montserrat";
+    --ff-serif: "Fraunces";
   
     /* small screen font-sizes */
     --fs-200: 0.875rem;
@@ -40,7 +40,7 @@
       body {
         font-size: var(--fs-200);
         font-family: var(--ff-sans);
-        /* font-weight: var(--fw-700); */
+        font-weight: var(--fw-700);
         background: var(--clr-primary-300);
       }
 
@@ -73,8 +73,8 @@
         background: var(--clr-primary-500);
       }
 
-      span {
-        font: Fraunces;
+      .price {
+        font: var(--ff-serif);
         font-size: var(--fs-900);
         color: var(--clr-primary-400);
         font-weight: var(--fw-700);

@@ -42,23 +42,57 @@
         font-family: var(--ff-sans);
         font-weight: var(--fw-700);
         background: var(--clr-primary-300);
+        color: var(--clr-neutral-500);
       }
 
       img {
         display: block;
-        border-radius: .75em .75em 0 0;
       }
 
       .card {
-        display: flex;
-        justify-content: center;
         max-width: 70em;
         margin: 0 auto;
         padding: 2em;
         display: grid;
         gap: 2em;
+        /* background-color: var(--clr-neutral-100); */
+      }
+
+      .product {
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        background-color: var(--clr-neutral-100);
+        padding: 1.5em;
+        border-radius: .75em;
+      }
+
+      .card > img {
+        padding: 0;
+        margin: 0;
+      }
+
+      .product_type {
+        text-transform: uppercase;
+      }
+
+      .product_name {
+        font-family: var(--ff-serif);
+        font-size: var(--fs-900);
+        color: var(--clr-neutral-900);
       }
         
+      .current {
+        font-family: var(--ff-serif);
+        font-size: var(--fs-900);
+        color: var(--clr-primary-400);
+        font-weight: var(--fw-700);
+        text-decoration: none;
+      }
+
+      .old {
+        text-decoration: line-through;
+      }
 
       .btn {
         background: var(--clr-primary-400);
@@ -73,10 +107,4 @@
         background: var(--clr-primary-500);
       }
 
-      .price span {
-        font-family: var(--ff-serif);
-        font-size: var(--fs-900);
-        color: var(--clr-primary-400);
-        font-weight: var(--fw-700);
-      }
     

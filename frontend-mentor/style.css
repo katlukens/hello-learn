@@ -1,8 +1,7 @@
 :root {
-  --ff-sans: "Montserrat", sans-serif;
-  --ff-serif: "Fraunces", serif;
+    --ff-sans: "Montserrat", sans-serif;
+    --ff-serif: "Fraunces", serif;
 
-    /* small screen font-sizes */
     --fs-100: .75rem;
     --fs-200: 0.875rem;
     --fs-300: 1rem;
@@ -39,41 +38,83 @@
       *::after {
         box-sizing: border-box;
       }
+
+      * {
+        margin:0
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        line-height: 1.5;
+        -webkit-font-smoothing : antialiased;
+      }
+
+      img,
+      picture,
+      video,
+      canvas {
+        display: block;
+        max-width: 100%;
+      }
+
+      input,
+      button,
+      textarea,
+      select {
+        font: inherit;
+      }
+
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        overflow-wrap: break-word;
+      }
+
+      /* reset */
+
   
       body {
         font-size: var(--fs-200);
         font-family: var(--ff-sans);
         font-weight: var(--fw-700);
-        line-height: 1;
+        /* line-height: 1; */
         background: var(--clr-primary-300);
         color: var(--clr-neutral-500);
         /* margin: auto; */
       }
 
 
-      .container {
+      /* .container {
         max-width: 26rem;
         margin: auto;
         padding: .5rem;    
-      }
+      } */
 
-      .card {
+      /* .card {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-      }
+      } */
 
 
-      .image1 {
-        /* display: flex; */
+      /* picture {
+        display: flex;
         width: 100%;
         border-radius: .75rem .75rem 0 0;
         margin: auto;
-      }
+      } */
 
       .image2 {
         display: none;
-      }
+      } */
 
 
       .product {
@@ -148,7 +189,7 @@
         }
         
         
-        .image1 {
+        /* .image1 {
           display: none;
         }
         
@@ -159,12 +200,18 @@
           border-radius: .75rem 0 0 .75rem;
           margin: auto;
           flex: auto;
-        }
+        } */
 
 
         .product {
           border-radius: 0 .75em .75em 0;
+          /* min-width: 23rem; */
+          /* min-height: auto; */
         }
+
+        /* .btn {
+          max-height: 3rem;
+        } */
       }
       
       

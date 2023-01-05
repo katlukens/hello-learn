@@ -49,7 +49,7 @@
       }
 
       body {
-        line-height: 1.5;
+        line-height: 1.7;
         -webkit-font-smoothing : antialiased;
       }
 
@@ -78,6 +78,12 @@
         overflow-wrap: break-word;
       }
 
+      h1,
+      h2,
+      h3 {
+        line-height: 1;
+      }
+
       /* reset */
 
   
@@ -88,7 +94,26 @@
         /* line-height: 1; */
         background: var(--clr-primary-300);
         color: var(--clr-neutral-500);
-        /* margin: auto; */
+        margin: 1rem;
+        display: grid;
+        place-content: center;
+      }
+
+      .price {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .visually-hidden:not(:focus):not(:active) {
+        clip: rect(0 0 0 0); 
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap; 
+        width: 1px;
       }
 
 
@@ -98,11 +123,16 @@
         padding: .5rem;    
       } */
 
-      /* .card {
-        display: flex;
+      .container {
+        --content-padding: 1.5rem;
+        --content-spacing: 1rem;
+        display: grid;
         flex-wrap: wrap;
         justify-content: center;
-      } */
+        background-color: var(--clr-neutral-100);
+        border-radius: .75rem;
+        overflow: hidden;
+      }
 
 
       /* picture {
@@ -112,40 +142,42 @@
         margin: auto;
       } */
 
-      .image2 {
+      /* .image2 {
         display: none;
       } */
 
 
       .product {
-        display: grid;
+        padding: var(--content-padding);
         background-color: var(--clr-neutral-100);
-        padding: 1.5rem;
-        border-radius: 0 0 .75em .75em;
+        display: grid;
+        gap: var(--content-spacing);
+        /* border-radius: 0 0 .75em .75em; */
       }
 
-      .product_type {
+      .product__type {
         text-transform: uppercase;
-        font-size: var(--fs-100);
-        letter-spacing: .25rem;
+        /* font-size: var(--fs-100); */
+        letter-spacing: .25em;
       }
 
-      .product_name {
+      .product__name {
         font-family: var(--ff-serif);
         font-size: var(--fs-900);
         font-weight: var(--fw-700);
         color: var(--clr-neutral-900);
-        margin: .25rem 0;
+        /* margin: .25rem 0; */
       }
 
-      .product_bio {
+      .product__bio {
         font-size: var(--fs-200);
         line-height: 1.75;
       }
 
-      .price {
+
+      /* .price {
         word-spacing: 2rem;
-      }
+      } */
         
       .current {
         font-family: var(--ff-serif);
@@ -155,38 +187,54 @@
         text-decoration: none;
       }
 
-      .old {
+      /* .old {
         text-decoration: line-through;
         vertical-align: super;
         text-align: right;
-      }
+      } */
 
       .btn {
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-flex;
+        gap: .75rem;
+        justify-content: center;
+        align-items: center;
         background: var(--clr-primary-400);
         color: var(--clr-neutral-100);
-        text-decoration: none;
-        text-align: center;
-        font-weight: var(--fw-700);
-        padding: 0.75rem 0.75rem;
+        /* text-align: center; */
+        font-weight: var(--fw-600);
+        padding: 0.5rem 1.5rem;
         border-radius: 0.25rem;
       }
 
-      svg {
+      .btn[data-icon="shopping-cart"]::before {
+        content: "";
+        background-image: url(img/icon-cart.svg);
+        width: 15px;
+        height: 16px;
+      }
+
+      /* svg {
         position: relative;
         top: .2rem;
         right: .75rem;
-      }
+      } */
 
       .btn:hover {
         background: var(--clr-primary-500);
       }
       
       @media (min-width: 600px) {
-        .card {
+        .container {
+          grid-template-columns: 1fr 1fr;
+        }
+        
+        /* .card {
           display: flex;
           flex-wrap: nowrap;
           flex: 1 1 0;
-        }
+        } */
         
         
         /* .image1 {
@@ -203,11 +251,11 @@
         } */
 
 
-        .product {
+        /* .product {
           border-radius: 0 .75em .75em 0;
-          /* min-width: 23rem; */
-          /* min-height: auto; */
-        }
+          min-width: 23rem;
+          min-height: auto;
+        } */
 
         /* .btn {
           max-height: 3rem;
